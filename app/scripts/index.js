@@ -2,8 +2,15 @@ var app = angular.module('jvViewApp', ['ngAnimate', 'fx.animations', 'infinite-s
 
 angular.module('infinite-scroll').value('THROTTLE_MILLISECONDS', 250)
 
-app.controller('mainCtrl', function($scope, $http, $timeout, ListViewAPI) {
+app.controller('mainCtrl', function($scope, $timeout, ListViewAPI) {
     $scope.listView = new ListViewAPI();
+
+    $scope.$watch('listView', function(val) {
+        if (!val) return;
+        $('#gallery').photobox('a', {
+            time: 0
+        });
+    }, true);
 });
 
 app.factory('ListViewAPI', function($http) {
