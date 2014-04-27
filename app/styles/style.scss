@@ -1,5 +1,15 @@
 @import "compass";
 
+// customize for app
+body .double-bounce-spinner{
+  position: fixed;
+  margin: 0;
+  top: 95%;
+  left: 50%;
+  margin-left: -20px;
+  margin-top: -20px;
+}
+
 #gallery{
   list-style-type: none;
   @include pie-clearfix;

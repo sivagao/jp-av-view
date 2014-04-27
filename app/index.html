@@ -5,16 +5,12 @@
 </head><body>
 <div ng-controller="mainCtrl">
    <ul id="gallery" infinite-scroll="listView.nextPage()" infinite-scroll-disabled="listView.busy" infinite-scroll-distance="0">
-     <li ng-repeat="av in listView.items track by $index" class='fx-fade-left-big fx-trigger fx-easing-cubic fx-speed-1400'>
+     <li ng-repeat="av in listView.items track by $index" class='fx-fade-down fx-speed-500 fx-trigger fx-easing-cubic'>
        <a ng-href="{{av.preview}}"><img ng-src="{{av.preview}}" alt="" title="{{av.title}}"></a>
      </li>
    </ul>
-  <!-- <ul>
-    <li ng-repeat="av in avs">
-      <p>{{av.title}}</p>
-      <img ng-src="{{av.preview}}" alt="">
-    </li>
-  </ul> -->
+  <!-- <rotating-plane-spinner ng-show="listView.busy"></rotating-plane-spinner> -->
+  <double-bounce-spinner ng-show="listView.busy"></double-bounce-spinner>
 </div>
 <!-- bower:js -->
 <script src="components/jquery/dist/jquery.js"></script>
@@ -27,6 +23,7 @@
 <script src="components/angular-route/angular-route.js"></script>
 <script src="components/angular-sanitize/angular-sanitize.js"></script>
 <script src="components/angular-cookies/angular-cookies.js"></script>
+<script src="components/angular-spinkit/build/angular-spinkit.min.js"></script>
 <!-- endbower -->
 <script src="vendors/photobox/photobox/jquery.photobox.js"></script>
 <script src="vendors/GreenSock-JS/src/minified/TweenMax.min.js"></script>

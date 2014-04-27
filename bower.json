@@ -27,6 +27,7 @@
     "angular-animate": "~1.2.16",
     "angular-route": "~1.2.16",
     "angular-sanitize": "~1.2.16",
-    "angular-cookies": "~1.2.16"
+    "angular-cookies": "~1.2.16",
+    "angular-spinkit": "~0.0.2"
   }
 }
