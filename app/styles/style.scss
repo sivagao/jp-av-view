@@ -1,0 +1,45 @@
+@import "compass";
+
+#gallery{
+  list-style-type: none;
+  @include pie-clearfix;
+}
+#gallery img{
+  max-height: 200px;
+}
+#gallery li {
+float: left;
+}
+.horizontal #gallery img{
+  height: 330px;
+  width: auto;
+}
+.horizontal #gallery{
+  height: 100%;
+}
+.horizontal #gallery{
+  float: left;
+}
+body.horizontal{
+    background:#000;
+    font-family:Georgia;
+    font-size: 34px;
+    font-style: italic;
+    letter-spacing:-1px;
+    width:685000;
+    /* no marigin 5 : 685000; */
+    position:absolute;
+    top:0px;
+    left:0px;
+    bottom:0px;
+}
+#pbOverlay.show .wrapper > *{
+  transition-delay: 0!important;
+  transition-duration: .3s!important;
+}
+#pbOverlay .wrapper > *, #pbOverlay.hide .wrapper > .prepare{
+  -webkit-transform: initial!important;
+}
+#pbOverlay .wrapper{
+  transition-duration: .3s!important;
+}

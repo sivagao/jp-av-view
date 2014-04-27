@@ -1,0 +1,35 @@
+<!DOCTYPE html><html class=''>
+<head><meta charset='UTF-8'>
+<link rel="stylesheet" href="vendors/photobox/photobox/photobox.css">
+<link rel="stylesheet" href="styles/style.css">
+</head><body>
+<div ng-controller="mainCtrl">
+   <ul id="gallery" infinite-scroll="listView.nextPage()" infinite-scroll-disabled="listView.busy" infinite-scroll-distance="0">
+     <li ng-repeat="av in listView.items track by $index" class='fx-fade-left-big fx-trigger fx-easing-cubic fx-speed-1400'>
+       <a ng-href="{{av.preview}}"><img ng-src="{{av.preview}}" alt="" title="{{av.title}}"></a>
+     </li>
+   </ul>
+  <!-- <ul>
+    <li ng-repeat="av in avs">
+      <p>{{av.title}}</p>
+      <img ng-src="{{av.preview}}" alt="">
+    </li>
+  </ul> -->
+</div>
+<!-- bower:js -->
+<script src="components/jquery/dist/jquery.js"></script>
+<script src="components/angular/angular.js"></script>
+<script src="components/lodash/dist/lodash.compat.js"></script>
+<script src="components/angular-animate/angular-animate.js"></script>
+<script src="components/gsap/src/uncompressed/TweenMax.js"></script>
+<script src="components/ng-Fx/dist/ng-Fx.js"></script>
+<script src="components/ngInfiniteScroll/build/ng-infinite-scroll.js"></script>
+<script src="components/angular-route/angular-route.js"></script>
+<script src="components/angular-sanitize/angular-sanitize.js"></script>
+<script src="components/angular-cookies/angular-cookies.js"></script>
+<!-- endbower -->
+<script src="vendors/photobox/photobox/jquery.photobox.js"></script>
+<script src="vendors/GreenSock-JS/src/minified/TweenMax.min.js"></script>
+
+<script src="scripts/index.js"></script>
+</body></html>

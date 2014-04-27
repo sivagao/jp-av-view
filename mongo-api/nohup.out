@@ -1,0 +1,33 @@
+ * Running on http://127.0.0.1:5000/
+ * Running on http://127.0.0.1:5000/
+127.0.0.1 - - [27/Apr/2014 22:25:40] "GET /most_wanted HTTP/1.1" 200 -
+127.0.0.1 - - [27/Apr/2014 22:25:41] "GET /favicon.ico HTTP/1.1" 404 -
+127.0.0.1 - - [27/Apr/2014 22:25:41] "GET /most_wanted HTTP/1.1" 200 -
+127.0.0.1 - - [27/Apr/2014 22:28:24] "GET /most_wanted HTTP/1.1" 200 -
+127.0.0.1 - - [27/Apr/2014 22:28:24] "GET /most_wanted HTTP/1.1" 200 -
+127.0.0.1 - - [27/Apr/2014 22:28:29] "GET /most_wanted HTTP/1.1" 200 -
+127.0.0.1 - - [27/Apr/2014 22:28:30] "GET /most_wanted HTTP/1.1" 200 -
+127.0.0.1 - - [27/Apr/2014 22:28:31] "GET /most_wanted HTTP/1.1" 200 -
+127.0.0.1 - - [27/Apr/2014 22:28:54] "GET /most_wanted HTTP/1.1" 200 -
+Traceback (most recent call last):
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/SocketServer.py", line 295, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/SocketServer.py", line 321, in process_request
+    self.finish_request(request, client_address)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/SocketServer.py", line 334, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/SocketServer.py", line 651, in __init__
+    self.finish()
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/SocketServer.py", line 710, in finish
+    self.wfile.close()
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/socket.py", line 279, in close
+    self.flush()
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/socket.py", line 303, in flush
+    self._sock.sendall(view[write_offset:write_offset+buffer_size])
+error: [Errno 32] Broken pipe
+127.0.0.1 - - [27/Apr/2014 22:28:54] "GET /most_wanted HTTP/1.1" 200 -
+127.0.0.1 - - [27/Apr/2014 22:31:04] "GET /most_wanted HTTP/1.1" 200 -
+127.0.0.1 - - [27/Apr/2014 22:31:04] "GET /most_wanted HTTP/1.1" 200 -
+127.0.0.1 - - [27/Apr/2014 22:31:19] "GET /most_wanted HTTP/1.1" 200 -
+127.0.0.1 - - [27/Apr/2014 22:31:25] "GET /most_wanted HTTP/1.1" 200 -
+127.0.0.1 - - [27/Apr/2014 22:36:19] "GET /most_wanted HTTP/1.1" 200 -

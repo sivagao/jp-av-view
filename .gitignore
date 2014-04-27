@@ -1,0 +1,13 @@
+.tmp
+dist
+deploy
+
+.DS_Store
+.sass-cache
+node_modules
+app/components
+app/vendors
+jv
+
+
+*.sublime-*

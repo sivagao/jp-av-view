@@ -1,0 +1,32 @@
+{
+  "name": "jv-view",
+  "version": "0.0.0",
+  "authors": [
+    "gaohailang <gaohailang@wandoujia.com>"
+  ],
+  "description": "jv-view bower compoents file",
+  "moduleType": [
+    "amd"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.2.16",
+    "jquery": "~2.1.0",
+    "lodash": "~2.4.1",
+    "ng-Fx": "~0.3.3",
+    "ngInfiniteScroll": "~1.1.0",
+    "angular-animate": "~1.2.16",
+    "angular-route": "~1.2.16",
+    "angular-sanitize": "~1.2.16",
+    "angular-cookies": "~1.2.16"
+  }
+}
