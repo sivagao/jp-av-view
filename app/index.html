@@ -7,6 +7,10 @@
    <ul id="gallery" infinite-scroll="listView.nextPage()" infinite-scroll-disabled="listView.busy" infinite-scroll-distance="0">
      <li ng-repeat="av in listView.items track by $index" class='fx-fade-down fx-speed-500 fx-trigger fx-easing-cubic'>
        <a ng-href="{{av.preview}}"><img ng-src="{{av.preview}}" alt="" title="{{av.title}}"></a>
+       <!-- <span><a href="javascript:void(0);" class="view-btn" ng-click="openMagLink(av.downloadurl)">点击播放</a></span> -->
+       <div style="text-align: center;height: 24px;">
+         <span ng-show="av.fav">已喜欢</span><button ng-click="favHandler(av)">喜欢</button>
+       </div>
      </li>
    </ul>
   <!-- <rotating-plane-spinner ng-show="listView.busy"></rotating-plane-spinner> -->

@@ -2,7 +2,7 @@ var app = angular.module('jvViewApp', ['ngAnimate', 'fx.animations', 'infinite-s
 
 angular.module('infinite-scroll').value('THROTTLE_MILLISECONDS', 2500)
 
-app.controller('mainCtrl', function($scope, $timeout, ListViewAPI) {
+app.controller('mainCtrl', function($scope, $timeout, ListViewAPI, $http) {
     $scope.listView = new ListViewAPI();
 
     $scope.$watch('listView.newItems', function(val) {
@@ -23,6 +23,23 @@ app.controller('mainCtrl', function($scope, $timeout, ListViewAPI) {
             time: 0
         });
     });
+
+    $scope.favHandler = function(item) {
+        console.log(item);
+        $http({
+            data: {
+                fav: true
+            },
+            url: '/api/v1/genre_office_lady/' + item._id,
+            headers: {
+                'if-match': item._etag
+            },
+            method: 'PATCH'
+        }).then(function(resp) {
+            console.log(resp);
+        });
+    };
+
 });
 
 app.factory('ListViewAPI', function($http, $timeout) {
@@ -40,7 +57,7 @@ app.factory('ListViewAPI', function($http, $timeout) {
         this.busy = true;
         this.timer = (new Date()).getTime();
 
-        var url = "/api/v1/most_wanted";
+        var url = "/api/v1/genre_office_lady";
         if (this.links && this.links.next) {
             url = this.links.next.href;
         }
